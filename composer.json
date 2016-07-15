@@ -27,5 +27,4 @@
         "psr-0": { "Mev\\SortableTreeBundle": "" }
     },
     "target-dir": "Mev/SortableTreeBundle",
-    }
 }
