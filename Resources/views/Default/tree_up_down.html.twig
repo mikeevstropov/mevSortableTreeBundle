@@ -1,0 +1,14 @@
+{% block field %}
+    {% spaceless %}
+		{% if object.parent is not null and object.parent.children[0].id != object.id %}
+		<a class="btn btn-sm btn-default" href="{{ path('admin_tree_up', {'page_id': object.id}) }}">
+            {{- 'icon_move_up'|trans -}}
+        </a>
+		{% endif %}
+		{% if object.parent is not null and object.parent.children[object.parent.children|length - 1].id != object.id %}
+        <a class="btn btn-sm btn-default" href="{{ path('admin_tree_down', {'page_id': object.id}) }}">
+            {{- 'icon_move_down'|trans -}}
+        </a>
+		{% endif %}
+    {% endspaceless %}
+{% endblock %}
