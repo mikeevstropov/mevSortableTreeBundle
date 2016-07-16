@@ -19,6 +19,12 @@ https://symfony.com/doc/master/bundles/StofDoctrineExtensionsBundle/index.html
 \- nested behavior will implement the standard Nested-Set behavior on your Entity  
 https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/tree.md
 
+### Install
+
+```console
+composer require mikeevstropov/sortable-tree-bundle
+```
+
 ### Configuration
 
 Enable the **mevTreeSortableBehaviorBundle** to your kernel:
