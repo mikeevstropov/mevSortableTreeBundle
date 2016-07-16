@@ -3,6 +3,8 @@
 # mevTreeSortableBehaviorBundle
 Offers a sortable feature for your Symfony2/3 admin tree listing
 
+![screenshot](https://cloud.githubusercontent.com/assets/15070249/16892502/cd866138-4b3e-11e6-891d-02bf1ed4acac.png)
+
 ### Install requirements
 
 **SonataAdminBundle**  
