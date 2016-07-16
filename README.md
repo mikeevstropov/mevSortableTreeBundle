@@ -39,7 +39,7 @@ class AppKernel extends Kernel
 }
 ```
 
-Create new routes and action in Admin Class:
+Create new routes and field action in Admin Class:
 
 ```php
 // src/AppBundle/Admin/CategoryAdmin.php
