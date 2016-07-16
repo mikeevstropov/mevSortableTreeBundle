@@ -6,7 +6,7 @@ Offers a sortable feature for your Symfony2/3 admin tree listing
 ### Install requirements
 
 **SonataAdminBundle**
-- the SonataAdminBundle provides a installation article here:
+- the SonataAdminBundle provides a installation article here:  
 http://symfony.com/doc/current/cmf/tutorial/sonata-admin.html
 
 **StofDoctrineExtensionsBundle**
