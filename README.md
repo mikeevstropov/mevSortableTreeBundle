@@ -5,16 +5,16 @@ Offers a sortable feature for your Symfony2/3 admin tree listing
 
 ### Install requirements
 
-**SonataAdminBundle**
-- the SonataAdminBundle provides a installation article here:  
+**SonataAdminBundle**  
+\- the SonataAdminBundle provides a installation article here:
 http://symfony.com/doc/current/cmf/tutorial/sonata-admin.html
 
-**StofDoctrineExtensionsBundle**
-- then you need install StofDoctrineExtensionsBundle  
+**StofDoctrineExtensionsBundle**  
+\- then you need install StofDoctrineExtensionsBundle  
 https://symfony.com/doc/master/bundles/StofDoctrineExtensionsBundle/index.html
 
-**Enable Tree Extension**
-- nested behavior will implement the standard Nested-Set behavior on your Entity  
+**Enable Tree Extension**  
+\- nested behavior will implement the standard Nested-Set behavior on your Entity  
 https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/tree.md
 
 ### Configuration
