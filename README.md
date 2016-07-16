@@ -94,3 +94,6 @@ class CategoryAdmin extends AbstractAdmin
 
 That's it!
 
+### ToDo
+- Sortable behaveor for root elements
+
