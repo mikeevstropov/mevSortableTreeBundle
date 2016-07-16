@@ -69,7 +69,7 @@ class CategoryAdmin extends AbstractAdmin
 }
 ```
 
-Configure sort the list of models by `root` and `lft` fields in Admin Class:
+Configure sort the list of models by `root` and `lft` fields:
 
 ```php
 // src/AppBundle/Admin/CategoryAdmin.php
