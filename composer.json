@@ -2,7 +2,7 @@
     "name": "mikeevstropov/sortable-tree-bundle",
     "type": "symfony-bundle",
     "description": "Offers a sortable feature for your Symfony2/3 admin tree listing",
-    "keywords": ["sortable","tree","admin","sonata",'symfony'],
+    "keywords": ["sortable","tree","admin","sonata","symfony"],
     "homepage": "https://github.com/mikeevstropov/mevSortableTreeBundle",
     "license": "MIT",
     "authors": [
