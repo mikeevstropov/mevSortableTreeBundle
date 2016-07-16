@@ -1,6 +1,6 @@
 [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?maxAge=2592000)]()
 
-# mevTreeSortableBehaviorBundle
+# mevSortableTreeBundle
 Offers a sortable feature for your Symfony2/3 admin tree listing
 
 ![screenshot](https://cloud.githubusercontent.com/assets/15070249/16892502/cd866138-4b3e-11e6-891d-02bf1ed4acac.png)
