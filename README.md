@@ -103,5 +103,5 @@ class CategoryAdmin extends AbstractAdmin
 That's it!
 
 ### ToDo
-- Sortable behaveor for root elements
+- Sortable behaveor for root elements (but, you can hide root element)
 
