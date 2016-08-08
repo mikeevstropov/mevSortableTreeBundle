@@ -27,7 +27,7 @@ composer require mikeevstropov/sortable-tree-bundle
 
 ### Configuration
 
-Enable the **mevTreeSortableBehaviorBundle** to your kernel:
+Enable the **mevSortableTreeBundle** to your kernel:
 
 ```php
 // app/AppKernel.php
