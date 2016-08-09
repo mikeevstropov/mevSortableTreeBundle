@@ -16,7 +16,7 @@ http://symfony.com/doc/current/cmf/tutorial/sonata-admin.html
 (check [stof/doctrine-extensions-bundle](https://symfony.com/doc/master/bundles/StofDoctrineExtensionsBundle/index.html) for easier integration in your project)
 https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/tree.md
 
-### Install
+### Installation
 
 ```console
 composer require mikeevstropov/sortable-tree-bundle
