@@ -42,7 +42,7 @@ class AppKernel extends Kernel
 }
 ```
 
-Include `MevSortableTreeBundle:SortableBundle` to third service argument:
+Include `MevSortableTreeBundle:SortableTree` to third service argument:
 
 ``` yml
 # app/config/services.yml
