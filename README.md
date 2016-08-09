@@ -42,6 +42,22 @@ class AppKernel extends Kernel
 }
 ```
 
+Include 'MevSortableTreeBundle:SortableBundle' to third service argument
+
+``` yml
+# app/config/services.yml
+
+#   SonataAdminBundle Category
+    admin.category:
+        class: AppBundle\Admin\CategoryAdmin
+        arguments:
+            - ~
+            - AppBundle\Entity\Category
+            - 'MevSortableTreeBundle:SortableTree'
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Category }
+```
+
 Create new routes and field action in Admin Class:
 
 ```php
@@ -80,7 +96,7 @@ class CategoryAdmin extends AbstractAdmin
         // ...
         $formMapper->add('parent', 'sonata_type_model', array(
             'query' => $query,
-            'required' => true,
+            'required' => false, // remove this row after the root element is created
             'btn_add' => false,
             'property' => 'name'
         ));
