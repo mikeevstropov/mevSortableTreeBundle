@@ -58,7 +58,7 @@ Include 'MevSortableTreeBundle:SortableBundle' to third service argument
             - { name: sonata.admin, manager_type: orm, label: Category }
 ```
 
-Create new routes and field action in Admin Class:
+Create new routes and the action field in Admin Class:
 
 ```php
 // src/AppBundle/Admin/CategoryAdmin.php
