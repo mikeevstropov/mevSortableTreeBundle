@@ -59,8 +59,34 @@ class CategoryAdmin extends AbstractAdmin
 	// ...
 	protected function configureRoutes(RouteCollection $collection)
 	{
-		$collection->add('tree_up', $this->getRouterIdParameter().'/treeup/{page_id}');
-		$collection->add('tree_down', $this->getRouterIdParameter().'/treedown/{page_id}');
+		$collection->add('up', $this->getRouterIdParameter().'/up');
+        $collection->add('down', $this->getRouterIdParameter().'/down');
+    }
+    
+    protected function configureFormFields(FormMapper $formMapper)
+    {
+        // create custom query to hide the current element by `id`
+
+        $subjectId = $this->getRoot()->getSubject()->getId();
+        $query = null;
+
+        if ($subjectId)
+        {
+            $query = $this->modelManager
+                ->getEntityManager('AppBundle\Entity\Category')
+                ->createQueryBuilder('c')
+                ->select('c')
+                ->from('AppBundle:Category', 'c')
+                ->where('c.id != '. $subjectId);
+        }
+        
+        // ...
+        $formMapper->add('parent', 'sonata_type_model', array(
+            'query' => $query,
+            'required' => true,
+            'btn_add' => false,
+            'property' => 'name'
+        ));
     }
 
 	protected function configureListFields(ListMapper $listMapper)
@@ -68,9 +94,12 @@ class CategoryAdmin extends AbstractAdmin
 		// ...
 		$listMapper->add('_action', null, array(
 			'actions' => array(
-				'edit' => array(
-					'template' => 'MevSortableTreeBundle:Default:tree_up_down.html.twig'
-				)
+				'up' => array(
+                    'template' => 'MevSortableTreeBundle:Default:list__action_up.html.twig'
+                ),
+                'down' => array(
+                    'template' => 'MevSortableTreeBundle:Default:list__action_down.html.twig'
+                )
 			)
 		));
 	}
@@ -90,9 +119,11 @@ class CategoryAdmin extends AbstractAdmin
 	public function createQuery($context = 'list')
 	{
 		$proxyQuery = parent::createQuery('list');
-		// Default Alias is "o"
-		$proxyQuery->addOrderBy('o.root', 'ASC');
-		$proxyQuery->addOrderBy('o.lft', 'ASC');
+        // Default Alias is "o"
+        // You can use `id` to hide root element
+        // $proxyQuery->where('o.id != 1');
+        $proxyQuery->addOrderBy('o.root', 'ASC');
+        $proxyQuery->addOrderBy('o.lft', 'ASC');
     
 		return $proxyQuery;
 	}
