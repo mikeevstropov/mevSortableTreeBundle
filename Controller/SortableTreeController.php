@@ -9,35 +9,37 @@ use Sonata\AdminBundle\Controller\CRUDController;
 
 class SortableTreeController extends CRUDController
 {
-    public function treeUpAction($page_id, Request $request)
+    public function upAction(Request $request)
     {
     	$object = $this->admin->getSubject();
     	$entity = \Doctrine\Common\Util\ClassUtils::getClass($object);
-    	
+		$id = $object->getId();
+		
     	$repo = $this->getDoctrine()
     		->getEntityManager()
     		->getRepository($entity);
-
-    	$subject = $repo->findOneById($page_id);
-
+		
+    	$subject = $repo->findOneById($id);
+		
     	if ($subject->getParent())
     	{
-    		$repo->moveUp($page_id);
+    		$repo->moveUp($subject);
     	}
 
         return new RedirectResponse($this->admin->generateUrl('list', $this->admin->getFilterParameters()));
     }
-    public function treeDownAction($page_id, Request $request)
+    public function downAction(Request $request)
     {
     	$object = $this->admin->getSubject();
     	$entity = \Doctrine\Common\Util\ClassUtils::getClass($object);
-    	
+		$id = $object->getId();
+		
     	$repo = $this->getDoctrine()
     		->getEntityManager()
     		->getRepository($entity);
-
-    	$subject = $repo->findOneById($page_id);
-
+		
+    	$subject = $repo->findOneById($id);
+		
     	if ($subject->getParent())
     	{
     		$repo->moveDown($subject);

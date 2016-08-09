@@ -1,0 +1,9 @@
+{% block field %}
+    {% spaceless %}
+		{% if object.parent is not null and object.parent.children[object.parent.children|length - 1].id != object.id %}
+        <a class="btn btn-sm btn-default" href="{{ admin.generateObjectUrl('down', object) }}">
+            &darr;
+        </a>
+		{% endif %}
+    {% endspaceless %}
+{% endblock %}
