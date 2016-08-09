@@ -11,12 +11,9 @@ Offers a sortable feature for your Symfony2/3 admin tree listing
 \- the SonataAdminBundle provides a installation article here:  
 http://symfony.com/doc/current/cmf/tutorial/sonata-admin.html
 
-**StofDoctrineExtensionsBundle**  
-\- then you need install StofDoctrineExtensionsBundle  
-https://symfony.com/doc/master/bundles/StofDoctrineExtensionsBundle/index.html
-
-**Enable Tree Extension**  
+**Install and enable Tree Extension from [gedmo/doctrine-extensions](https://packagist.org/packages/gedmo/doctrine-extensions)**  
 \- nested behavior will implement the standard Nested-Set behavior on your Entity  
+(check [stof/doctrine-extensions-bundle](https://symfony.com/doc/master/bundles/StofDoctrineExtensionsBundle/index.html) for easier integration in your project)
 https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/tree.md
 
 ### Install
