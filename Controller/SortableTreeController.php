@@ -16,7 +16,7 @@ class SortableTreeController extends CRUDController
 		$id = $object->getId();
 		
     	$repo = $this->getDoctrine()
-    		->getEntityManager()
+    		->getManager()
     		->getRepository($entity);
 		
     	$subject = $repo->findOneById($id);
@@ -35,7 +35,7 @@ class SortableTreeController extends CRUDController
 		$id = $object->getId();
 		
     	$repo = $this->getDoctrine()
-    		->getEntityManager()
+    		->getManager()
     		->getRepository($entity);
 		
     	$subject = $repo->findOneById($id);
